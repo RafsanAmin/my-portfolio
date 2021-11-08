@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "launch": {
+    "configurations": [
+      {
+        "type": "node-terminal",
+        "name": "Next-Lanch",
+        "request": "launch",
+        "command": "npm run dev"
+      }
+    ],
+    "compounds": []
+  }
+}
