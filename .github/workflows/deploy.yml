@@ -30,7 +30,7 @@ jobs:
       - run: touch ./out/.nojekyll
 
       - name: Deploy
-        uses: RafsanAmin/github-pages-deploy-action@3.5.9
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
