@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import Img from 'next/image';
 import { useState } from 'react';
 import A from '../components/counter';
 import Link from 'next/link';
@@ -11,7 +10,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Link href="/credit">Credit</Link>
       <p>Next.js is made by</p>
-      <Img src="/nextjs/vercel.svg" width="100" height="100" />
+      <img src="/nextjs/vercel.svg" width="100" height="100" alt="hello" />
       <A state={state} />
     </div>
   );
