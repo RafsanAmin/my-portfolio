@@ -1,10 +1,10 @@
 import { NextPage, GetStaticProps } from 'next';
 import Link from 'next/link';
 import React from 'react';
-
+import Styles from '../styles/Home.module.css';
 const credit: NextPage = ({ json }: any) => {
   return (
-    <div>
+    <div className={Styles.container}>
       <Link href="/">Go Home Bro</Link>
       <br />
       <a href="https://rafpost.herokuapp.com">My FaceBook</a>
