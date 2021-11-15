@@ -10,8 +10,8 @@ $('.ch div div a').hover(() => {
     300
   );
 });
-function gotoPage(x) {
-  window.location.href = x;
+function gotoPage(x, y) {
+  y ? window.open(x, '_blank') : (window.location.href = x);
 }
 function copy(text) {
   if (typeof text === 'object') {

@@ -282,17 +282,23 @@ body {
 }
 .my_proj_con {
   text-align: center;
+  display: grid;
+  place-items: center;
 }
 .my_proj_sld {
-  display: flex;
-  justify-content: center;
-  padding: 0rem 5rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1300px;
+  width: 100%;
+  grid-gap: 3rem;
+  padding: 2rem;
 }
 .my_proj_crd {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
-  margin: 75px 0.5rem;
   transition: 0.25s linear;
   cursor: pointer;
   border-radius: 10px;
@@ -309,9 +315,10 @@ body {
 .my_proj_crd:hover {
   transform: translateY(-5%);
 }
-.my_proj_crd img {
+.my_proj_crd > img {
   width: 100%;
   aspect-ratio: 16 /9;
+  object-fit: cover;
 }
 .contain {
   object-fit: contain;
@@ -329,7 +336,8 @@ body {
   vertical-align: middle;
 }
 .my_proj_crd .text h3 img {
-  width: 3.5rem;
+  width: 2.1rem;
+  margin-right: 0.5rem;
 }
 
 .my_proj_crd .text p {
@@ -337,6 +345,7 @@ body {
   text-align: left;
   line-height: 1;
   color: #3e4f5e;
+  max-width: 240px;
 }
 .my_proj_crd h3::before {
   content: none;
@@ -421,7 +430,7 @@ body {
   position: relative;
   padding: 2.5px 15px;
   font-size: 1.2rem;
-  color: #2093f0;
+  color: #2093f0 !important;
   border: 2px solid transparent;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -431,7 +440,7 @@ body {
   margin-left: 0rem;
 }
 .proj_a a:hover {
-  color: #2093f0 !;
+  color: #2093f0;
   box-shadow: 0px 0px 23px 3px rgba(32, 147, 240, 0.53);
   text-decoration: none;
 }
@@ -501,9 +510,8 @@ body {
 }
 @media only screen and (max-width: 1200px) {
   .my_proj_sld {
-    flex-direction: column;
-    padding: 0rem;
-    align-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
   }
   .my_proj_crd {
     margin: 12.5px 0rem;
@@ -734,13 +742,16 @@ body {
   .ch div div a {
     font-size: 1.5rem;
   }
-
+  .my_proj_crd .text {
+    max-width: 150px;
+  }
   .my_proj_crd .text h3 {
     font-size: 1.2rem;
   }
 
   .my_proj_crd .text p {
     font-size: 0.95rem;
+    max-width: 150px;
   }
   .proj_a {
     text-align: right;
@@ -753,7 +764,7 @@ body {
     padding: 1.5px 7px;
   }
 }
-@media only screen and (max-width: 344px) {
+@media only screen and (max-width: 360px) {
   .my_proj_crd .text h3 {
     font-size: 1.05rem;
     margin-left: -5px;

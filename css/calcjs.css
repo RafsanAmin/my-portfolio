@@ -11,6 +11,9 @@ body {
   font-family: Jost;
   font-weight: 500;
 }
+.down {
+  color: #72b8ff;
+}
 .ex {
   margin-top: 2rem;
   font-size: 1.5rem !important;
@@ -103,7 +106,7 @@ body {
   position: relative;
 }
 .abtn tr td:before {
-  content: "";
+  content: '';
   display: block;
   padding-top: 100%;
 }

@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="This is a simple Calculator Made by Rafsan"
-    />
+    <meta name="description" content="This is a simple Calculator Made by Rafsan" />
     <meta name="robots" content="index, follow" />
     <meta
       name="Keywords"
@@ -78,9 +75,7 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html"
-              >Home <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" onclick="gotoProj('#abt')"
@@ -88,10 +83,7 @@
             >
           </li>
           <li class="nav-item active">
-            <a
-              onclick="gotoProj('#my_proj_con')"
-              class="nav-link"
-              style="cursor: pointer"
+            <a onclick="gotoProj('#my_proj_con')" class="nav-link" style="cursor: pointer"
               >My Projects <span class="sr-only">(current)</span></a
             >
           </li>
@@ -104,7 +96,7 @@
     <div class="my_proj_con">
       <h2>My Calculator</h2>
     </div>
-    <div class="my_proj_con">
+    <div class="down">
       <h2 class="ex">Downloads</h2>
       <div class="download">
         <div
@@ -155,62 +147,27 @@
             <input type="button" class="butn x_sqr ot" value="x²" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn op"
-              value="÷"
-              onclick="opclick('/')"
-            />
+            <input type="button" class="butn op" value="÷" onclick="opclick('/')" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn op"
-              value="*"
-              onclick="opclick('*')"
-            />
+            <input type="button" class="butn op" value="*" onclick="opclick('*')" />
           </td>
         </tr>
         <tr class="r-3">
           <td>
-            <input
-              type="button"
-              class="butn ot"
-              value="xⁿ"
-              onclick="opclick('^')"
-            />
+            <input type="button" class="butn ot" value="xⁿ" onclick="opclick('^')" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn num_btn"
-              value="7"
-              onclick="instNum(7)"
-            />
+            <input type="button" class="butn num_btn" value="7" onclick="instNum(7)" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn num_btn"
-              value="8"
-              onclick="instNum(8)"
-            />
+            <input type="button" class="butn num_btn" value="8" onclick="instNum(8)" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn num_btn"
-              value="9"
-              onclick="instNum(9)"
-            />
+            <input type="button" class="butn num_btn" value="9" onclick="instNum(9)" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn op"
-              value="-"
-              onclick="opclick('-')"
-            />
+            <input type="button" class="butn op" value="-" onclick="opclick('-')" />
           </td>
         </tr>
         <tr class="r-4">
@@ -218,36 +175,16 @@
             <input type="button" class="butn root ot" value="√" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn num_btn"
-              value="4"
-              onclick="instNum(4)"
-            />
+            <input type="button" class="butn num_btn" value="4" onclick="instNum(4)" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn num_btn"
-              value="5"
-              onclick="instNum(5)"
-            />
+            <input type="button" class="butn num_btn" value="5" onclick="instNum(5)" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn num_btn"
-              value="6"
-              onclick="instNum(6)"
-            />
+            <input type="button" class="butn num_btn" value="6" onclick="instNum(6)" />
           </td>
           <td rowspan="2">
-            <input
-              type="button"
-              class="butn op rcbf"
-              value="+"
-              onclick="opclick('+')"
-            />
+            <input type="button" class="butn op rcbf" value="+" onclick="opclick('+')" />
           </td>
         </tr>
         <tr class="r-5">
@@ -255,46 +192,21 @@
             <input type="button" class="butn invrt ot" value="1/x" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn num_btn"
-              value="1"
-              onclick="instNum(1)"
-            />
+            <input type="button" class="butn num_btn" value="1" onclick="instNum(1)" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn num_btn"
-              value="2"
-              onclick="instNum(2)"
-            />
+            <input type="button" class="butn num_btn" value="2" onclick="instNum(2)" />
           </td>
           <td>
-            <input
-              type="button"
-              class="butn num_btn"
-              value="3"
-              onclick="instNum(3)"
-            />
+            <input type="button" class="butn num_btn" value="3" onclick="instNum(3)" />
           </td>
         </tr>
         <tr class="r-6">
           <td>
-            <input
-              type="button"
-              class="butn num_btn"
-              value="."
-              onclick="instNum('.')"
-            />
+            <input type="button" class="butn num_btn" value="." onclick="instNum('.')" />
           </td>
           <td class="rpr" colspan="2">
-            <input
-              type="button"
-              class="butn num_btn rcbf"
-              value="0"
-              onclick="instNum(0)"
-            />
+            <input type="button" class="butn num_btn rcbf" value="0" onclick="instNum(0)" />
           </td>
           <td class="rpr" colspan="2">
             <input type="button" class="butn eq rcbf" id="eq" value="=" />
