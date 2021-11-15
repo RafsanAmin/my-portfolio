@@ -1,0 +1,33 @@
+* {
+  font-family: Jost, sans-serif;
+}
+.my_proj_con h2 {
+  font-family: Jost;
+  font-weight: 500;
+}
+.timer {
+  text-align: center;
+  font-family: Source Code Pro;
+  padding: 1rem;
+}
+.display {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  height: 100%;
+  font-family: Source Code Pro;
+}
+.btn {
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  border-radius: 35px;
+}
+@media only screen and (max-width: 575px) {
+  .display {
+    font-size: 2.5rem;
+  }
+  .btn {
+    font-size: 1.25rem;
+  }
+}

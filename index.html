@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="I am HRM Rafsan Amin. I am a beginner level front-end web developer. Visit my website to see WHO I AM"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="Keywords"
+      content="Rafsan, HRM Rafsan, Amin, HRM Rafsan Amin, rafsanamin, jscalc, todolist, stopwatch"
+    />
+    <meta name="author" content="HRM Rafsan Amin" />
+    <title>RAFSAN-Home</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <!--fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!--frameowrk-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link class="aos_fix" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="fav/all.min.css" />
+    <link rel="stylesheet" href="fav/fontawesome.min.css" />
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css?ver-1.2" />
+  </head>
+  <body>
+    <div class="header">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html"><h1>RAFSAN</h1></a>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars fa-lg"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" onclick="gotoProj('#abt')"
+                >About Me <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a onclick="gotoProj('#my_proj_con')" class="nav-link" style="cursor: pointer"
+                >My Projects <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li onclick="gotoProj('#cont')" class="nav-item">
+              <a class="nav-link" href="#">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="prof_con">
+        <div class="prof_txt">
+          <h2 style="color: #0f4982">Hi! I am</h2>
+          <h1 style="color: #1976d2">HRM</h1>
+          <h1 style="color: #2196f3">Rafsan Amin</h1>
+          <p style="color: #666666">I am a Web Developer and also a Tech Expert</p>
+          <div class="prof_btn">
+            <a onclick="gotoProj('#abt')" class="btn prof_btn_1">About Me</a>
+            <a onclick="gotoProj('#my_proj_con')" class="btn prof_btn_2">My Projects</a>
+          </div>
+        </div>
+        <div class="prof_img">
+          <img src="./img/imbg.png" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
+
+    <div id="abt" class="about_me">
+      <div class="img"><img src="img/profile.jpg" /></div>
+      <div class="texts">
+        <h2>Who am I?</h2>
+        <p>
+          I am HRM Rafsan Amin. I live in Dhaka, Bangladesh. I am a 14 year old boy who reads in
+          Grade-9 in Uttara High School and College. I am learning Web Development and also I can
+          edit Photos, videos etc. I am now focusing in Web Development more. You can see my web
+          development skills and my projects below.
+        </p>
+      </div>
+    </div>
+    <div class="skill_con">
+      <h2 style="text-shadow: none">Skills</h2>
+      <div class="skill_img">
+        <img src="img/skill/html.png" alt="html" />
+        <img src="img/skill/css.png" alt="css" />
+        <img src="img/skill/js.png" alt="js" />
+        <img src="img/skill/jq.png" alt="jq" />
+      </div>
+    </div>
+    <div id="my_proj_con" class="my_proj_con">
+      <h2>Projects</h2>
+
+      <div class="my_proj_sld">
+        <div class="my_proj_crd text-center" onclick="gotoPage('./jscalc.html')">
+          <img src="img/proj/jscalc.jpg" />
+          <div class="my_proj_d">
+            <div class="text">
+              <h3><i class="fas fa-calculator pr-3"></i>JS Calculator</h3>
+              <p>A javascript calculator</p>
+            </div>
+
+            <div class="proj_a">
+              <a href="./jscalc.html">Check it out!</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="my_proj_crd text-center"
+          onclick="gotoPage('https://rafsanamin.herokuapp.com/todos/todo/todo.html')"
+        >
+          <img src="img/proj/todo.jpg" />
+          <div class="my_proj_d">
+            <div class="text">
+              <h3><i class="fas fa-list pr-3"></i> JS Todo List</h3>
+              <p>A javascript to-do list</p>
+            </div>
+            <div class="proj_a">
+              <a href="https://rafsanamin.herokuapp.com/todos/todo/todo.html">Check it out!</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="my_proj_crd text-center"
+          onclick="gotoPage('https://rafsanamin.herokuapp.com/todos/todo/todo.html')"
+        >
+          <img class="contain" src="img/proj/rafpost_ss.png" />
+          <div class="my_proj_d">
+            <div class="text">
+              <h3><img class="contain" src="img/proj/rafpost.png" />RafPost</h3>
+              <p>An online based public posting platform.</p>
+            </div>
+            <div class="proj_a">
+              <a href="https://rafpost.herokuapp.com">Check it out!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ch_con">
+      <h2><i style="color: red" class="fab fa-youtube fa-3x"></i><br />Youtube Channel</h2>
+      <div class="ch">
+        <img src="img/ch_lg.png" />
+        <div>
+          <div>
+            <h3>
+              Mr. <span style="color: #1976d2">Tech</span>
+              <span style="color: #2196f3"> Experts</span>
+            </h3>
+            <p>
+              Our channel talks about various technological matters. You can find everything about
+              tech here.
+            </p>
+            <a href="https://www.youtube.com/channel/UCHSI2gyTW3dI1GK1RHAnyGg" target="_blank">
+              <i class="fas fa-angle-right gtch mr-2"></i>Go to Channel
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 id="cont" class="contact_h mt-5">Contact Me</h2>
+    <div class="contact_me">
+      <div onclick="copy('rafsanamin2020@gmail.com')" class="feild">
+        <div>
+          <h5><i class="far fa-envelope pr-2" aria-hidden="true"></i>E-Mail</h5>
+          <p>rafsanamin2020@gmail.com</p>
+        </div>
+      </div>
+
+      <div target="_blank" onclick="gotoPage('https://discord.gg/cMF7JEk4qB')" class="feild">
+        <div>
+          <h5><i class="fab fa-discord pr-2" aria-hidden="true"></i>Discord Channel</h5>
+          <p>Click to get invited</p>
+        </div>
+      </div>
+      <div target="_blank" onclick="gotoPage('https://github.com/RafsanAmin')" class="feild">
+        <div>
+          <h5><i class="fab fa-github pr-2" aria-hidden="true"></i>Github</h5>
+          <p>Click to go to my Github Repo.</p>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br /><br />
+    </div>
+    <script src="js/a.js?ver-1.2"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ mirror: true });
+    </script>
+  </body>
+</html>

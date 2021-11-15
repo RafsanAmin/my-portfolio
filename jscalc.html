@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a simple Calculator Made by Rafsan"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="Keywords"
+      content="Rafsan, HRM Rafsan, Amin, HRM Rafsan Amin, rafsanamin, jscalc, todolist, stopwatch"
+    />
+    <meta name="author" content="HRM Rafsan Amin" />
+    <title>RAFSAN-JS Calc</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <!--fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!--framework-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!--css-->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="fav/all.min.css" />
+    <link rel="stylesheet" href="fav/fontawesome.min.css" />
+
+    <link rel="stylesheet" href="css/style.css?ver-1.2" />
+    <link rel="stylesheet" href="css/calcjs.css?ver-1.4" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="index.html"><h1>RAFSAN</h1></a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fa fa-bars fa-lg"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" onclick="gotoProj('#abt')"
+              >About Me <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a
+              onclick="gotoProj('#my_proj_con')"
+              class="nav-link"
+              style="cursor: pointer"
+              >My Projects <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li onclick="gotoProj('#cont')" class="nav-item">
+            <a class="nav-link" href="#">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="my_proj_con">
+      <h2>My Calculator</h2>
+    </div>
+    <div class="my_proj_con">
+      <h2 class="ex">Downloads</h2>
+      <div class="download">
+        <div
+          onclick="gotoPage('https://drive.google.com/file/d/1333t_-cLVI-QWMyFl_9hpdneitNklwP_/view?usp=sharing')"
+          class="feild"
+        >
+          <a><i class="fab fa-android pr-2"></i>Android</a>
+        </div>
+        <div
+          onclick="gotoPage('https://drive.google.com/file/d/1Fh2-Ddb_BrcYBc6LjlvDHi6gYtG0rTUM/view?usp=sharing')"
+          class="feild"
+        >
+          <a><i class="fab fa-windows pr-2"></i>Windows</a>
+        </div>
+      </div>
+    </div>
+    <div class="calculator">
+      <table class="abtn">
+        <div class="dis">
+          <input type="text" class="mem_display" value="0" readonly />
+          <input type="text" class="display" value="0" readonly />
+        </div>
+        <tr class="r-1">
+          <td id="templaate">
+            <input type="button" class="butn clr eq" value="C" />
+          </td>
+          <td>
+            <input type="button" class="butn perc op" value="%" />
+          </td>
+          <td>
+            <input type="button" class="butn pls-mns op" value="+/-" />
+          </td>
+          <td>
+            <input type="button" class="butn clr_e eq" value="CE" />
+          </td>
+          <td>
+            <input type="button" class="butn back" value="◄" />
+          </td>
+        </tr>
+        <tr class="r-2">
+          <td>
+            <input type="button" class="butn x_cube ot" value="x³" />
+          </td>
+          <td>
+            <input type="button" class="butn cb_root ot" value="∛" />
+          </td>
+          <td>
+            <input type="button" class="butn x_sqr ot" value="x²" />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn op"
+              value="÷"
+              onclick="opclick('/')"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn op"
+              value="*"
+              onclick="opclick('*')"
+            />
+          </td>
+        </tr>
+        <tr class="r-3">
+          <td>
+            <input
+              type="button"
+              class="butn ot"
+              value="xⁿ"
+              onclick="opclick('^')"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn num_btn"
+              value="7"
+              onclick="instNum(7)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn num_btn"
+              value="8"
+              onclick="instNum(8)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn num_btn"
+              value="9"
+              onclick="instNum(9)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn op"
+              value="-"
+              onclick="opclick('-')"
+            />
+          </td>
+        </tr>
+        <tr class="r-4">
+          <td>
+            <input type="button" class="butn root ot" value="√" />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn num_btn"
+              value="4"
+              onclick="instNum(4)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn num_btn"
+              value="5"
+              onclick="instNum(5)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn num_btn"
+              value="6"
+              onclick="instNum(6)"
+            />
+          </td>
+          <td rowspan="2">
+            <input
+              type="button"
+              class="butn op rcbf"
+              value="+"
+              onclick="opclick('+')"
+            />
+          </td>
+        </tr>
+        <tr class="r-5">
+          <td>
+            <input type="button" class="butn invrt ot" value="1/x" />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn num_btn"
+              value="1"
+              onclick="instNum(1)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn num_btn"
+              value="2"
+              onclick="instNum(2)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="butn num_btn"
+              value="3"
+              onclick="instNum(3)"
+            />
+          </td>
+        </tr>
+        <tr class="r-6">
+          <td>
+            <input
+              type="button"
+              class="butn num_btn"
+              value="."
+              onclick="instNum('.')"
+            />
+          </td>
+          <td class="rpr" colspan="2">
+            <input
+              type="button"
+              class="butn num_btn rcbf"
+              value="0"
+              onclick="instNum(0)"
+            />
+          </td>
+          <td class="rpr" colspan="2">
+            <input type="button" class="butn eq rcbf" id="eq" value="=" />
+            <!--rcdf round corner bug fix-->
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script src="js/a.js?ver-1.2"></script>
+    <script src="js/calc.js?ver-1.5"></script>
+  </body>
+</html>
