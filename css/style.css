@@ -268,14 +268,33 @@ body {
 .skill_img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   justify-content: space-around;
   align-items: center;
   padding: 0rem 20rem;
 }
 .skill_img img {
   width: 100%;
-  padding: 1.5rem 25%;
+  padding-block: 1rem;
   transition: 0.2s linear;
+  object-fit: fill;
+  background: radial-gradient(rgb(255, 255, 255) 15%, rgba(0, 0, 0, 0) 50%);
+}
+.o,
+.tw {
+  padding-inline: 25%;
+}
+.th,
+.fr {
+  padding-inline: 15%;
+}
+.fi,
+.si,
+.sev {
+  padding-inline: 10%;
+}
+.ei {
+  padding-inline: 30%;
 }
 .skill_img img:hover {
   transform: scale(1.2) !important;
