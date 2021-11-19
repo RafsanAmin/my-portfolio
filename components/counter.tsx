@@ -1,15 +1,18 @@
-import React, { Dispatch, FC as RComp } from 'react';
+import React, { Dispatch, FC as RComp, useContext } from 'react';
+import { AppContext } from '../contexts/appContext';
 
-type ReactState<T> = [T, Dispatch<React.SetStateAction<T>>];
-interface Props {
-  state: ReactState<number>;
-}
-const A: RComp<Props> = ({ state }) => {
-  const [stat, setState] = state;
+const A: RComp<{}> = () => {
+  const [stat, ss] = useContext(AppContext);
   return (
     <>
-      <p>{stat}</p>
-      <button onClick={() => setState((s) => s + 1)}>++</button>
+      <p>{stat.counter}</p>
+      <button
+        onClick={() => {
+          ss({ type: 'COUNTER' });
+        }}
+      >
+        ++
+      </button>
     </>
   );
 };
