@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  basePath: '/nextjs',
-  assetPrefix: '/nextjs',
+  basePath: '/my-portfolio-v2',
+  assetPrefix: '/my-portfolio-v2',
 };

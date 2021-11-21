@@ -1,6 +1,5 @@
 {
-  "name": "next-app-ts",
-  "private": true,
+  "name": "portfoliov2",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

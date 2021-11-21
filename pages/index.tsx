@@ -1,42 +1,51 @@
-import type { NextPage } from 'next';
-import { useState, useReducer, createContext, Dispatch } from 'react';
-import Counter from '@components/counter';
-import Time from '@components/time';
-import Link from 'next/link';
-import styles from '../styles/Home.module.css';
-import DivCounter from '@components/divCounter';
-import { AppContext, State, Action } from 'contexts/appContext';
+import About from '@components/About';
+import Channel from '@components/Channel';
+import Header from '@components/Hero';
+import { Project, ProjectsCont } from '@components/Projects';
+import Skills from '@components/Skills';
+import { NextPage } from 'next';
+import React from 'react';
 
-const reducer = (state: State, action: Action): State => {
-  switch (action.type) {
-    case 'COUNTER':
-      return { ...state, counter: state.counter + 1 };
-    case 'DATE':
-      return { ...state, date: new Date().toLocaleTimeString() };
-    case 'CONT':
-      return { ...state, cont: action.value };
-  }
-};
-const init: State = {
-  cont: [0, 0],
-  counter: 0,
-  date: new Date().toLocaleTimeString(),
-};
-const Home: NextPage = () => {
-  const reducerS = useReducer(reducer, init);
+const basePath = '/nextjs';
+const index: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <Link href="/credit">Credit</Link>
-      <p>Next.js is made by</p>
-      <img src="/nextjs/vercel.svg" width="100" height="100" alt="hello" />
-      <AppContext.Provider value={reducerS}>
-        <Counter />
-        <Time />
-        <hr />
-        <DivCounter />
-      </AppContext.Provider>
+    <div>
+      <Header />
+      <About />
+      <Skills />
+      <ProjectsCont>
+        <Project
+          image={basePath + '/img/proj/jscalc.jpg'}
+          icon={<i className="fas fa-calculator pr-3"></i>}
+          title="JS Calc"
+          desc="A javascript calculator"
+          link="/jscalc"
+        />
+        <Project
+          image={basePath + '/img/proj/todo.jpg'}
+          icon={<i className="fas fa-list pr-3"></i>}
+          title="JS Todo List"
+          desc="A javascript to-do list"
+          link="https://rafsanamin.herokuapp.com/todos/todo/todo.html"
+        />
+        <Project
+          image={basePath + '/img/proj/rafpost_ss.png'}
+          icon={<i className="fas fa-calculator pr-3"></i>}
+          title="RafPost"
+          desc="An online based public posting platform."
+          link="https://rafpost.herokuapp.com"
+        />
+        <Project
+          image={basePath + '/img/proj/theme.png'}
+          icon={<i className="fas fa-calculator pr-3"></i>}
+          title="One Dark Pro ++"
+          desc="An Eye-catching VSCode Theme"
+          link="https://marketplace.visualstudio.com/items?itemName=HRMRafsanAmin.onedarkproplusplus"
+        />
+      </ProjectsCont>
+      <Channel />
     </div>
   );
 };
 
-export default Home;
+export default index;
