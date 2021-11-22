@@ -1,8 +1,9 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import '../styles/style.css';
-import '../styles/bootstrap.min.css';
+import '@style/bootstrap.min.css';
 import '../public/fav/all.min.css';
+import '@style/style.css';
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
