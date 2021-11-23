@@ -29,9 +29,11 @@ jobs:
       - run: npm run export --if-present
       - run: touch ./out/.nojekyll
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+      - name: Deploy in domain
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: out
+          server: ftpupload.net
+          username: epiz_25771120
+          password: ${{ secrets.ftp }}
+          server-dir: 'htdocs/'
+          local-dir: './out/'

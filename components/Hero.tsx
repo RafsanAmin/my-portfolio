@@ -12,11 +12,11 @@ const Header: FC = () => {
             <h1 style={{ color: '#2196f3' }}>Rafsan Amin</h1>
             <p style={{ color: '#666666' }}>I am a Web Developer and also a Tech Expert</p>
             <div className="prof_btn">
-              <a href="#abt" className="btn prof_btn_1">
-                About Me
+              <a href="#abt">
+                <button className="prof_btn_1">About Me</button>
               </a>
-              <a href="#my_proj_con" className="btn prof_btn_2">
-                My Projects
+              <a href="#my_proj_con">
+                <button className="prof_btn_2">My Projects</button>
               </a>
             </div>
           </div>

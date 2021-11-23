@@ -20,7 +20,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta name="author" content="HRM Rafsan Amin" />
         <title>RAFSAN-Home</title>
-        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
     </>

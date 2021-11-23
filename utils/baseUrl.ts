@@ -1,3 +1,3 @@
-const baseUrl: string = '/my-portfolio-v2';
+const baseUrl: string = '';
 
 export default baseUrl;
