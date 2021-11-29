@@ -11,13 +11,19 @@ const About: FC = () => {
           <img src={`${baseUrl}/img/profile.jpg`} alt="" />
         </div>
         <div className="texts">
-          <h2>Hi 👋, I{"'"}m HRM Rafsan Amin</h2>
-          <h4>A junior full-stack developer.</h4>
+          <h2> HRM Rafsan Amin 🙋‍♂️</h2>
+          <h4>💻 A junior full-stack developer.🌐</h4>
+
           <p>
-            ❔❔❔
-            <br />I live in Dhaka, Bangladesh. I am a {age} year old boy. I am learning Web
-            Development and also I can edit Photos, videos etc. I am now focusing in Web Development
-            more especially MERN Stack. You can see my web development skills and my projects below.
+            <br />
+            🧭 I live in <b>Dhaka, Bangladesh.</b>
+            <br /> ⌛ I am a <b>{age}</b> year old boy.
+            <br />
+            🤓 I am learning <b>🌐 Web Development</b> and also I can edit 📷 <b>Photos</b>, 📽️{' '}
+            <b>videos</b> etc.
+            <br /> 🤹🏽‍♂️ I am now focusing in <b>Web Development</b> more especially{' '}
+            <b>MERN Stack and Next.js</b>.
+            <br /> ⬇️⬇️ You can see my web development skills and my projects below. ⬇️⬇️
             <br /> ⚡ Fun fact <b>I started coding at 12</b>
           </p>
         </div>

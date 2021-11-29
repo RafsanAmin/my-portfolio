@@ -1,0 +1,211 @@
+/** @format */
+
+* {
+  font-family: Jost, Arial, sans-serif;
+}
+
+body {
+  position: relative;
+}
+.my_proj_con h2 {
+  font-family: Jost;
+  font-weight: 500;
+}
+.down {
+  color: #72b8ff;
+}
+.ex {
+  margin-top: 2rem;
+  font-size: 1.5rem !important;
+}
+.download {
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  width: min(900px, 90%);
+  margin: 2rem 0;
+}
+.download .feild {
+  background-color: #fff;
+  border-left: 4px solid #72b8ff;
+  padding: 1rem 1rem;
+  line-height: 0.75rem;
+  margin: 0.25rem 1rem;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.33);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.download .feild:hover {
+  transform: translateY(-7.5%);
+  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.33);
+}
+.download .feild a {
+  color: #1281db;
+  margin: 0;
+  font-size: 1.25rem;
+}
+.download .feild a:hover {
+  color: #1281db;
+  text-decoration: none;
+}
+
+.img {
+  border: 10px solid #fff;
+  box-shadow: 5px 5px 11px 0px rgba(0, 0, 0, 0.39);
+}
+.down {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 1.2rem;
+}
+.down:hover {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.521);
+  font-size: 1.2rem;
+}
+.calculator {
+  position: absolute;
+  width: 30%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 5px 5px 11px 0px rgba(0, 0, 0, 0.39);
+}
+
+.abtn {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+.dis {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 3rem;
+}
+.dis input {
+  text-align: right;
+  border: 0;
+  margin: 1rem 0rem;
+}
+.abtn thead {
+  padding: 2rem;
+}
+.abtn tr td {
+  width: 20%;
+  position: relative;
+}
+.abtn tr td:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+.rpr:before {
+  padding-top: 0 !important;
+}
+.mem_display {
+  font-size: 1.5rem;
+}
+.display {
+  font-size: 2.5rem;
+}
+.butn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border: 0;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  font-weight: 500;
+  background-color: transparent;
+}
+.back {
+  background-color: rgb(236, 235, 235);
+  transition: 0.3s;
+}
+.back:hover {
+  background-color: rgb(148, 145, 145);
+}
+.num_btn {
+  color: #237dfa;
+  transition: 0.25s ease-in;
+}
+.num_btn:hover {
+  background-color: #b0d0fc;
+}
+
+.rcbf {
+  border-radius: 70px;
+}
+.op {
+  color: #00d478;
+  transition: 0.25s ease-in;
+}
+.op:hover {
+  background-color: #a1fad3;
+  color: #00d478;
+}
+.eq {
+  color: #fe0000;
+  transition: 0.25s ease-in;
+}
+.eq:hover {
+  background-color: #ffd4d4;
+  color: #fe0000;
+}
+.ot {
+  color: #ffbb31;
+  transition: 0.25s ease-in;
+}
+.ot:hover {
+  background-color: #ffe5b2;
+  color: #ffbb31;
+}
+@media only screen and (max-width: 1200px) {
+  .calculator {
+    width: 50%;
+    position: absolute;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 710px) {
+  .calculator {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .calculator {
+    border-radius: 10px;
+  }
+  .butn {
+    font-size: 1.6rem;
+  }
+  .mem_display {
+    font-size: 1.2rem;
+  }
+  .display {
+    font-size: 1.6rem;
+  }
+  .dis {
+    padding: 0.5rem 1.5rem;
+  }
+  .dis input {
+    margin: 0.5rem 0rem;
+  }
+}

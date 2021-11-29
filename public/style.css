@@ -1,23 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 * {
   font-family: Jost, sans-serif;
 }
 button:focus {
   outline: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
 body {
   position: relative;
-  background-image: url('/my-portfolio-v2/img/bg.svg');
+  background-image: url('/img/bg.svg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   animation: bgan 15s cubic-bezier(0.62, -0.02, 0.6, 0.74) infinite alternate;
 }
+
 @keyframes bgan {
   0% {
     background-position: left;
@@ -30,7 +33,7 @@ body {
   color: #0f4982;
 }
 .header {
-  height: 100vh;
+  height: calc(100vh - 107px);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -147,10 +150,17 @@ body {
   align-items: center;
   justify-content: center;
   text-align: right;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.33);
 }
 .about_me::before {
   content: '';
-  background-image: url(/my-portfolio-v2/img/abt_me.png);
+  background-image: url(/img/abt_me.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -159,9 +169,7 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   filter: blur(2.5px);
-  border-radius: 12px;
-  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.33);
-  height: 100%;
+  min-height: 700px;
   z-index: -1;
 }
 
