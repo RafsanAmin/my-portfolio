@@ -169,7 +169,7 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   filter: blur(2.5px);
-  min-height: 700px;
+  height: 100%;
   z-index: -1;
 }
 
