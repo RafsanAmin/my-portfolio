@@ -37,3 +37,4 @@ jobs:
           password: ${{ secrets.ftp }}
           server-dir: 'htdocs/'
           local-dir: './out/'
+          dangerous-clean-slate: true
