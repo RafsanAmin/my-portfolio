@@ -157,7 +157,6 @@ body {
 .about_me::before {
   content: '';
   background-image: url(/img/abt_me.png);
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
