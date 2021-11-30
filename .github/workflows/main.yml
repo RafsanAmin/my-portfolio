@@ -1,22 +1,22 @@
-on: push
-name: 🚀 Deploy website on push
-jobs:
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v2
+# on: push
+# name: 🚀 Deploy website on push
+# jobs:
+#   web-deploy:
+#     name: 🎉 Deploy
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: 🚚 Get latest code
+#         uses: actions/checkout@v2
 
-      - name: Use Node.js 12
-        uses: actions/setup-node@v2-beta
-        with:
-          node-version: '12'
+#       - name: Use Node.js 12
+#         uses: actions/setup-node@v2-beta
+#         with:
+#           node-version: '12'
 
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
-        with:
-          server: ftpupload.net
-          username: epiz_25771120
-          password: ${{ secrets.ftp }}
-          server-dir: 'htdocs/'
+#       - name: 📂 Sync files
+#         uses: SamKirkland/FTP-Deploy-Action@4.1.0
+#         with:
+#           server: ftpupload.net
+#           username: epiz_25771120
+#           password: ${{ secrets.ftp }}
+#           server-dir: 'htdocs/'
