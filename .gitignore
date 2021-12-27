@@ -37,3 +37,4 @@ yarn-error.log*
 *.tsbuildinfo
 *.ps1
 *.code-workspace
+.vscode

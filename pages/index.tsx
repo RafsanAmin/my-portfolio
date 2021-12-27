@@ -8,18 +8,16 @@ import Skills from '@components/Skills';
 import { NextPage } from 'next';
 import React from 'react';
 
-const index: NextPage = () => {
-  return (
-    <div>
-      <Navbar />
-      <Header />
-      <About />
-      <Skills />
-      <Projects />
-      <Channel />
-      <Contacts />
-    </div>
-  );
-};
+const index: NextPage = () => (
+  <div>
+    <Navbar />
+    <Header />
+    <About />
+    <Skills />
+    <Projects />
+    <Channel />
+    <Contacts />
+  </div>
+);
 
 export default index;

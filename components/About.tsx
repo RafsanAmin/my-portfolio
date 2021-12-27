@@ -1,5 +1,5 @@
+import baseUrl from '@util/baseUrl';
 import React, { FC } from 'react';
-import baseUrl from 'utils/baseUrl';
 
 const About: FC = () => {
   const age = new Date().getFullYear() - 2006;
