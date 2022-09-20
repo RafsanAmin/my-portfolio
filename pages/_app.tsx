@@ -36,8 +36,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#ffffff" />
         <meta name="author" content="HRM Rafsan Amin" />
         <title>RAFSAN-Home</title>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="google-site-verification"
+          content="7evutjBOtSMy736iZQxlqPMYy3_vxm21jxLpTKPiM2k"
+        />
       </Head>
       <Component {...pageProps} />
     </>
