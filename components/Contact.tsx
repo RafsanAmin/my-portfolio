@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 
 type fieldProps = {
   link?: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
   title: string;
   desc: string;
   handler?: () => any;
@@ -18,7 +18,7 @@ const ContactCont: FC = ({ children }) => (
 );
 
 const Field: FC<fieldProps> = ({ link, icon, title, desc, handler }) => (
-  <div onClick={() => (handler ? handler() : window.open(link))} className="feild">
+  <div onClick={() => (handler ? handler() : window.open(link))} className="field">
     <div>
       <h5>
         {icon}
@@ -28,6 +28,12 @@ const Field: FC<fieldProps> = ({ link, icon, title, desc, handler }) => (
     </div>
   </div>
 );
+
+Field.defaultProps = {
+  link: '#',
+  handler: () => {},
+};
+
 const Contacts: FC = () => (
   <ContactCont>
     <Field

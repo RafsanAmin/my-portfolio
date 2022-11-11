@@ -476,7 +476,7 @@ body {
   width: min(900px, 90%);
   padding: 3rem 0 7rem 0;
 }
-.contact_me .feild {
+.contact_me .field {
   background-color: #fff;
   border-left: 4px solid #72b8ff;
   padding: 1rem 1rem;
@@ -488,26 +488,26 @@ body {
   cursor: pointer;
   transition: 0.3s linear;
 }
-.contact_me .feild > div {
+.contact_me .field > div {
   display: flex;
   flex-direction: column;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-.contact_me .feild:hover {
+.contact_me .field:hover {
   transform: translateY(-7.5%);
   box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.33);
 }
-.contact_me .feild h5 {
+.contact_me .field h5 {
   color: #1281db;
   margin: 0;
 }
-.contact_me .feild h5 i {
+.contact_me .field h5 i {
   color: #1281db;
   font-size: 1.2rem;
 }
-.contact_me .feild p {
+.contact_me .field p {
   color: #144b80;
   margin: 0.25rem 0 0 0;
 }

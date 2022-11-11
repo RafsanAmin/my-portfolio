@@ -61,14 +61,14 @@ const Projects: FC = () => (
       icon={<i className="fas fa-list pr-3" />}
       title="JS Todo List"
       desc="A javascript to-do list"
-      link="https://rafsanamin.herokuapp.com/todos/todo/todo.html"
+      link="https://rafsanamin.onrender.com/todos/todo/todo.html"
     />
     <Project
       image={`${baseUrl}/img/proj/rafpost_ss.png`}
       icon={<img className="contain" src={`${baseUrl}/img/proj/rafpost.png`} alt="" />}
       title="RafPost"
       desc="An online based public posting platform."
-      link="https://rafpost.herokuapp.com"
+      link="https://rafpost.onrender.com"
     />
     <Project
       image={`${baseUrl}/img/proj/theme.png`}
