@@ -1,6 +1,6 @@
 import baseUrl from '@util/baseUrl';
 import { useRouter } from 'next/dist/client/router';
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 const ProjectsCont: FC = ({ children }) => (
   <div id="my_proj_con" className="my_proj_con">
@@ -61,14 +61,14 @@ const Projects: FC = () => (
       icon={<i className="fas fa-list pr-3" />}
       title="JS Todo List"
       desc="A javascript to-do list"
-      link="https://rafsanamin.onrender.com/todos/todo/todo.html"
+      link="https://rafsanamin.adaptable.app/todos/todo/todo.html"
     />
     <Project
       image={`${baseUrl}/img/proj/rafpost_ss.png`}
       icon={<img className="contain" src={`${baseUrl}/img/proj/rafpost.png`} alt="" />}
       title="RafPost"
       desc="An online based public posting platform."
-      link="https://rafpost.onrender.com"
+      link="https://rafpost.adaptable.app"
     />
     <Project
       image={`${baseUrl}/img/proj/theme.png`}
