@@ -1,18 +1,33 @@
 import baseUrl from '@util/baseUrl';
-import React, { FC } from 'react';
+import { FC } from 'react';
+import { AOSComp } from './AOS';
+
+interface SkillImgProp {
+  src: string;
+  className: string;
+}
+
+const SkillImg: FC<SkillImgProp> = ({ src, className }) => {
+  return (
+    <AOSComp delay={50} anim={'roll-in'}>
+      <img className={className} src={`${baseUrl}/img/skill/${src}`} alt={src} />
+    </AOSComp>
+  );
+};
 
 const Skills: FC = () => (
   <div className="skill_con">
     <h2 style={{ textShadow: 'none' }}>Skills</h2>
+
     <div className="skill_img">
-      <img className="o" src={`${baseUrl}/img/skill/sass.png`} alt="sass" />
-      <img className="tw" src={`${baseUrl}/img/skill/ts.png`} alt="ts" />
-      <img className="th" src={`${baseUrl}/img/skill/react.png`} alt="react" />
-      <img className="fr" src={`${baseUrl}/img/skill/nextJs.jpg`} alt="next" />
-      <img className="fi" src={`${baseUrl}/img/skill/express.png`} alt="ex" />
-      <img className="si" src={`${baseUrl}/img/skill/node.png`} alt="node" />
-      <img className="sev" src={`${baseUrl}/img/skill/mdb.png`} alt="mdb" />
-      <img className="ei" src={`${baseUrl}/img/skill/vscode.png`} alt="vscode" />
+      <SkillImg src="sass.png" className="o" />
+      <SkillImg src="ts.png" className="tw" />
+      <SkillImg src="react.png" className="th" />
+      <SkillImg src="nextJs.jpg" className="fr" />
+      <SkillImg src="express.png" className="ex" />
+      <SkillImg src="node.png" className="si" />
+      <SkillImg src="mdb.png" className="sev" />
+      <SkillImg src="vscode.png" className="ei" />
     </div>
   </div>
 );

@@ -1,14 +1,14 @@
 /** @format */
 
 * {
-  font-family: Jost, Arial, sans-serif;
+  font-family: Lexend, Arial, sans-serif;
 }
 
 body {
   position: relative;
 }
 .my_proj_con h2 {
-  font-family: Jost;
+  font-family: Lexend;
   font-weight: 500;
 }
 .down {

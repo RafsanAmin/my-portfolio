@@ -5,58 +5,22 @@
   },
   "extends": [
     "next/core-web-vitals",
-    "eslint:recommended",
     "plugin:react/recommended",
-    "airbnb",
-    "plugin:jsx-a11y/recommended",
-    "prettier"
+    "eslint:recommended",
+    "standard-with-typescript",
+    "prettier",
+    "plugin:react/jsx-runtime"
   ],
   "parser": "@typescript-eslint/parser",
+  "overrides": [],
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json",
     "sourceType": "module"
   },
-
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "@next/eslint-plugin-next"],
   "rules": {
-    "react/react-in-jsx-scope": 0,
-    "react-hooks/rules-of-hooks": 0,
-    "no-console": 0,
-    "react/state-in-constructor": 0,
-    "indent": 0,
-    "linebreak-style": 0,
-    "react/prop-types": 0,
-    "react/function-component-definition": 0,
-    "jsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/no-static-element-interactions": 0,
-    "jsx-a11y/no-noninteractive-element-interactions": 0,
-    "consistent-return": 0,
-    "no-plusplus": 0,
-    "prefer-promise-reject-errors": 0,
-    "no-useless-escape": 0,
-    "react-hooks/exhaustive-deps": 0,
-    "no-underscore-dangle": 0,
     "@next/next/no-img-element": 0,
-    "jsx-a11y/anchor-is-valid": 0,
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    ],
-    "prettier/prettier": [
-      "warn",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 100,
-        "tabWidth": 2,
-        "semi": true,
-        "endOfLine": "auto"
-      }
-    ]
+    "@typescript-eslint/strict-boolean-expressions": 0
   }
 }

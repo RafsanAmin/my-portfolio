@@ -1,6 +1,6 @@
 import Style from '@style/navbar.module.css';
 import Nlink from 'next/link';
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 
 const NavbarCont: FC = ({ children }) => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -21,10 +21,10 @@ const NavbarCont: FC = ({ children }) => {
   );
 };
 
-type LinkProps = {
+interface LinkProps {
   href: string;
   children: string;
-};
+}
 const Link: FC<LinkProps> = ({ href, children }) => (
   <Nlink href={href}>
     <li className="nav-item">

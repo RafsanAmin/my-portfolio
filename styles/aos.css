@@ -1,0 +1,28 @@
+.left-in {
+  transform: translateX(-150%);
+  opacity: 0;
+}
+.right-in {
+  transform: translateX(250%);
+  opacity: 0;
+}
+.top-in {
+  transform: translateY(-125%);
+  opacity: 0;
+}
+.bottom-in {
+  transform: translateY(125%);
+  opacity: 0;
+}
+.zoom-in {
+  transform: scale(0.3);
+  opacity: 0;
+}
+.roll-in {
+  transform: rotate(-360deg) scale(0);
+  opacity: 0;
+}
+.on {
+  transform: none;
+  opacity: 1;
+}
