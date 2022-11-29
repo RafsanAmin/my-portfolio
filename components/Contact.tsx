@@ -23,8 +23,17 @@ const ContactCont: FC = ({ children }) => (
 );
 
 const Field: FC<fieldProps> = ({ link, icon, title, desc, handler, anim }) => (
-  <AOSComp delay={anim.delay} anim={anim.anim}>
-    <a onClick={handler ?? (() => {})} href={link ?? '#'} className="field">
+  <AOSComp
+    delay={anim.delay}
+    anim={anim.anim}
+    style={{ flexBasis: '300px', margin: '0.5rem 0.5rem' }}
+  >
+    <a
+      style={{ height: '100%' }}
+      className="field"
+      onClick={handler ?? (() => {})}
+      href={link ?? '#'}
+    >
       <div>
         <h5>
           {icon}

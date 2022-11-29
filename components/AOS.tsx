@@ -36,16 +36,18 @@ export interface AOSProp {
   delay: number;
   duration?: number;
   className?: string;
+  style?: CSSProperties;
 }
 
-export const AOSComp: FC<AOSProp> = ({ children, anim, delay, duration, className }) => {
+export const AOSComp: FC<AOSProp> = ({ children, anim, delay, duration, className, style }) => {
   const ref = useRef<HTMLDivElement>(null);
   const observer = useContext(AOSContext);
-  const style: CSSProperties = {
+  const styleC: CSSProperties = {
     transition: `${(duration ?? 750) / 1000}s ease-in-out`,
     transitionProperty: 'transform, opacity',
     transitionDelay: delay.toString() + 'ms',
     display: 'block',
+    ...style,
   };
   useEffect(() => {
     const elem = ref.current;
@@ -56,7 +58,7 @@ export const AOSComp: FC<AOSProp> = ({ children, anim, delay, duration, classNam
     };
   }, [observer]);
   return (
-    <div className={anim + ' ' + (className ?? '')} style={style} ref={ref}>
+    <div className={anim + ' ' + (className ?? '')} style={styleC} ref={ref}>
       {children}
     </div>
   );
