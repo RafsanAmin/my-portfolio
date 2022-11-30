@@ -7,6 +7,7 @@ button:focus {
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 body {
@@ -18,7 +19,6 @@ body {
   background-position: center;
   animation: bgan 15s cubic-bezier(0.62, -0.02, 0.6, 0.74) infinite alternate;
   padding-bottom: 3rem;
-  overflow-x: hidden;
 }
 
 .fa {
@@ -80,7 +80,7 @@ body {
   animation: 2.5s load cubic-bezier(0.62, -0.02, 0.6, 0.74);
 }
 .prof_btn_1 {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1.5rem;
   color: #fff;
   font-size: 1.5rem;
   background: linear-gradient(90deg, rgba(25, 118, 210, 1) 0%, rgba(33, 150, 243, 1) 100%);

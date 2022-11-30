@@ -15,7 +15,6 @@ export const AOSCont: FC = ({ children }) => {
       (elems) => {
         elems.forEach((elem) => {
           const isVisible = elem.isIntersecting;
-          console.log(elem, elem.isIntersecting);
           if (isVisible) {
             (elem.target as HTMLElement).classList.add('on');
           } else {
@@ -28,6 +27,7 @@ export const AOSCont: FC = ({ children }) => {
 
     setState(IntersectionObserverObj);
   }, []);
+
   return <AOSContext.Provider value={state}>{children}</AOSContext.Provider>;
 };
 
