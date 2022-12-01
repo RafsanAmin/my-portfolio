@@ -4,7 +4,7 @@ import { AOSComp as Animate } from './AOS';
 
 const About: FC = () => {
   const age = Math.floor(
-    (new Date().valueOf() - new Date('10-13-2006').valueOf()) / 1000 / 60 / 60 / 24 / 365
+    (new Date().valueOf() - new Date('10/13/2006').valueOf()) / 1000 / 60 / 60 / 24 / 365
   );
 
   return (

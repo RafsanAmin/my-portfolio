@@ -361,7 +361,6 @@ body {
   position: relative;
 }
 .ch {
-  display: flex;
   width: 100%;
   padding: 2rem 5rem;
   display: flex;
@@ -369,11 +368,12 @@ body {
   align-items: center;
 }
 .ch .img {
-  width: 30%;
+  flex: 1;
   margin-right: 4rem;
 }
 .ch .img img {
   width: 100%;
+  max-width: 500px;
 }
 .ch h3::before {
   content: none;
@@ -381,8 +381,11 @@ body {
 .ch h3::after {
   content: none;
 }
-.ch > div > div {
-  width: min(40vw, 500px);
+.ch .inner-cont {
+  flex: 1;
+}
+.ch .inner {
+  max-width: 500px;
   text-align: justify;
   padding: 3rem 4rem;
   align-items: center;
@@ -393,25 +396,25 @@ body {
   justify-content: center;
   height: 60%;
 }
-.ch div div p {
+.ch .inner div p {
   font-size: 1.5rem;
   line-height: 3rem;
 }
-.ch div div h3 {
+.ch .inner div h3 {
   font-family: Lexend;
   font-weight: 500;
   text-shadow: none;
   color: #0f4982;
   font-size: 2.5rem;
 }
-.ch div div a {
+.ch .inner div a {
   color: #1976d2;
   position: relative;
   font-size: 1.8rem;
   text-decoration: none;
   font-weight: 500;
 }
-.ch div div a::after {
+.ch .inner div a::after {
   content: '';
   position: absolute;
   width: 0;
@@ -421,7 +424,7 @@ body {
   left: 0;
   transition: 0.75s cubic-bezier(0.62, -0.02, 0.6, 0.74);
 }
-.ch div div a:hover::after {
+.ch .inner div a:hover::after {
   width: 100%;
 }
 .proj_a {
@@ -554,9 +557,16 @@ body {
   .ch {
     flex-direction: column;
   }
+  .ch .inner {
+    max-width: 100%;
+  }
   .ch .img {
     width: 50%;
     margin: 0;
+  }
+  .ch .inner div h3 {
+    font-size: 2rem;
+    text-align: center;
   }
   .ch > div > div {
     width: min(90vw, 500px);
@@ -740,18 +750,19 @@ body {
     width: 90%;
     margin: 0;
   }
-  .ch > div > div {
+
+  .ch .inner {
     width: 90vw;
     padding: 2rem 1.5rem;
   }
-  .ch div div p {
+  .ch .inner div p {
     font-size: 1.1rem;
     line-height: 2rem;
   }
-  .ch div div h3 {
+  .ch .inner div h3 {
     font-size: 2rem;
   }
-  .ch div div a {
+  .ch .inner div a {
     font-size: 1.5rem;
   }
   .my_proj_crd .text {

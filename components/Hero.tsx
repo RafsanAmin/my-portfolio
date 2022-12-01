@@ -30,7 +30,7 @@ const Header: FC = () => (
             </div>
           </AOSComp>
         </div>
-        <AOSComp anim={'right-in'} delay={150} duration={1250} className="prof_img">
+        <AOSComp anim={'right-in'} delay={150} duration={1250} classNameCont="prof_img">
           <img src={`${baseUrl}/img/imbg.png`} alt="imbg" />
         </AOSComp>
       </div>

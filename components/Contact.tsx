@@ -26,7 +26,7 @@ const Field: FC<fieldProps> = ({ link, icon, title, desc, handler, anim }) => (
   <AOSComp
     delay={anim.delay}
     anim={anim.anim}
-    style={{ flexBasis: '300px', margin: '0.5rem 0.5rem' }}
+    styleCont={{ flexBasis: '300px', margin: '0.5rem 0.5rem' }}
   >
     <a
       style={{ height: '100%' }}

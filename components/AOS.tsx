@@ -16,9 +16,9 @@ export const AOSCont: FC = ({ children }) => {
         elems.forEach((elem) => {
           const isVisible = elem.isIntersecting;
           if (isVisible) {
-            (elem.target as HTMLElement).classList.add('on');
+            (elem.target as HTMLElement).children[0].classList.add('on');
           } else {
-            (elem.target as HTMLElement).classList.remove('on');
+            (elem.target as HTMLElement).children[0].classList.remove('on');
           }
         });
       },
@@ -36,10 +36,21 @@ export interface AOSProp {
   delay: number;
   duration?: number;
   className?: string;
+  classNameCont?: string;
+  styleCont?: CSSProperties;
   style?: CSSProperties;
 }
 
-export const AOSComp: FC<AOSProp> = ({ children, anim, delay, duration, className, style }) => {
+export const AOSComp: FC<AOSProp> = ({
+  children,
+  anim,
+  delay,
+  duration,
+  className,
+  style,
+  styleCont,
+  classNameCont,
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const observer = useContext(AOSContext);
   const styleC: CSSProperties = {
@@ -47,6 +58,7 @@ export const AOSComp: FC<AOSProp> = ({ children, anim, delay, duration, classNam
     transitionProperty: 'transform, opacity',
     transitionDelay: delay.toString() + 'ms',
     display: 'block',
+    width: '100%',
     ...style,
   };
   useEffect(() => {
@@ -58,8 +70,10 @@ export const AOSComp: FC<AOSProp> = ({ children, anim, delay, duration, classNam
     };
   }, [observer]);
   return (
-    <div className={anim + ' ' + (className ?? '')} style={styleC} ref={ref}>
-      {children}
+    <div style={{ width: '100%', ...styleCont }} className={classNameCont} ref={ref}>
+      <div className={anim + ' ' + (className ?? '')} style={styleC}>
+        {children}
+      </div>
     </div>
   );
 };

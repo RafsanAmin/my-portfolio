@@ -8,7 +8,7 @@ import Skills from '@components/Skills';
 import { NextPage } from 'next';
 
 const index: NextPage = () => (
-  <div>
+  <div style={{ overflowX: 'hidden' }}>
     <Navbar />
     <Header />
     <About />
