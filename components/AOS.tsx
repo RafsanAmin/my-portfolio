@@ -35,10 +35,8 @@ export interface AOSProp {
   anim: 'right-in' | 'left-in' | 'bottom-in' | 'top-in' | 'zoom-in' | 'roll-in';
   delay: number;
   duration?: number;
-  className?: string;
   classNameCont?: string;
   styleCont?: CSSProperties;
-  style?: CSSProperties;
 }
 
 export const AOSComp: FC<AOSProp> = ({
@@ -46,34 +44,27 @@ export const AOSComp: FC<AOSProp> = ({
   anim,
   delay,
   duration,
-  className,
-  style,
   styleCont,
   classNameCont,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const observer = useContext(AOSContext);
-  const styleC: CSSProperties = {
-    transition: `${(duration ?? 750) / 1000}s ease-in-out`,
-    transitionProperty: 'transform, opacity',
-    transitionDelay: delay.toString() + 'ms',
-    display: 'block',
-    width: '100%',
-    ...style,
-  };
+
   useEffect(() => {
     const elem = ref.current;
     observer && elem && observer.observe(elem);
+    elem?.children[0].classList.add(anim, 'aos-item');
+    const elemStyle = (elem?.children[0] as HTMLElement).style;
+    elemStyle.transition = `${(duration ?? 750) / 1000}s ease-in-out`;
+    elemStyle.transitionDelay = delay.toString() + 'ms';
 
     return () => {
       observer && elem && observer.unobserve(elem);
     };
-  }, [observer]);
+  }, [observer, anim, delay, duration]);
   return (
-    <div style={{ width: '100%', ...styleCont }} className={classNameCont} ref={ref}>
-      <div className={anim + ' ' + (className ?? '')} style={styleC}>
-        {children}
-      </div>
+    <div style={{ ...styleCont }} className={classNameCont} ref={ref}>
+      {children}
     </div>
   );
 };

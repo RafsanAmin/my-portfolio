@@ -12,7 +12,14 @@ interface fieldProps {
 }
 const ContactCont: FC = ({ children }) => (
   <>
-    <AOSComp delay={150} anim="zoom-in">
+    <AOSComp
+      delay={150}
+      anim="zoom-in"
+      styleCont={{
+        display: 'grid',
+        placeItems: 'center',
+      }}
+    >
       <h2 id="cont" className="contact_h mt-5">
         Contact Me
       </h2>

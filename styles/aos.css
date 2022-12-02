@@ -6,6 +6,9 @@
   transform: translateX(250%);
   opacity: 0;
 }
+.aos-item {
+  transition-property: transform, opacity;
+}
 .top-in {
   transform: translateY(-125%);
   opacity: 0;

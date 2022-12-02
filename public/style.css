@@ -215,10 +215,6 @@ body {
   opacity: 0.9;
   z-index: -1;
 }
-.contact_h {
-  left: 50%;
-  transform: translate(-50%, 0);
-}
 .skill_con h2,
 .my_proj_con h2,
 .ch_con h2,
@@ -370,6 +366,7 @@ body {
 .ch .img {
   flex: 1;
   margin-right: 4rem;
+  text-align: right;
 }
 .ch .img img {
   width: 100%;
@@ -381,7 +378,7 @@ body {
 .ch h3::after {
   content: none;
 }
-.ch .inner-cont {
+.ch .innerCont {
   flex: 1;
 }
 .ch .inner {
